@@ -16,6 +16,7 @@ type Msg interface {
 	ValidateBasic() Error
 
 	// Get the canonical byte representation of the Msg.
+	// 返回消息的json格式，用于签名
 	GetSignBytes() []byte
 
 	// Signers returns the addrs of signers that must sign.
